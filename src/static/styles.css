@@ -7,18 +7,18 @@
 
 body {
   font-family: Arial, sans-serif;
-  line-height: 1.6;
+  line-height: 1.8; /* Melhorando a legibilidade */
   color: #333;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 30px; /* Aumentando o espaçamento */
   background-color: #f5f5f5;
 }
 
 header {
   text-align: center;
-  padding: 20px 0;
-  margin-bottom: 30px;
+  padding: 30px 0; /* Ajustando o espaçamento */
+  margin-bottom: 40px; /* Maior separação do conteúdo principal */
   background-color: #1a237e;
   color: white;
   border-radius: 5px;
@@ -29,10 +29,10 @@ header h1 {
 }
 
 main {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
+  display: grid; /* Alterando para grid layout */
+  gap: 40px; /* Aumentando o espaçamento entre os elementos */
   justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Melhorando a responsividade */
 }
 
 @media (min-width: 768px) {
@@ -43,11 +43,12 @@ main {
 
 section {
   background-color: white;
-  padding: 20px;
+  padding: 25px; /* Ajustando o espaçamento interno */
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 500px;
+  margin-bottom: 20px; /* Adicionando espaçamento entre seções */
 }
 
 section h3 {
@@ -58,8 +59,8 @@ section h3 {
 }
 
 .activity-card {
-  margin-bottom: 15px;
-  padding: 15px;
+  margin-bottom: 20px; /* Maior separação entre os cartões */
+  padding: 20px; /* Ajustando o espaçamento interno */
   border: 1px solid #ddd;
   border-radius: 5px;
   background-color: #f9f9f9;
@@ -72,6 +73,28 @@ section h3 {
 
 .activity-card p {
   margin-bottom: 8px;
+}
+
+.activity-card ul {
+  margin-top: 10px;
+  padding-left: 20px;
+  list-style-type: disc;
+  color: #555;
+  background-color: #f1f1f1;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.activity-card ul li {
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+.activity-card ul li:first-child {
+  font-weight: bold;
+  color: #0066cc;
 }
 
 .form-group {
@@ -97,8 +120,8 @@ button {
   background-color: #1a237e;
   color: white;
   border: none;
-  padding: 10px 15px;
-  font-size: 16px;
+  padding: 12px 20px; /* Ajustando o tamanho do botão */
+  font-size: 18px; /* Tornando o texto mais legível */
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.2s;
@@ -106,6 +129,51 @@ button {
 
 button:hover {
   background-color: #3949ab;
+}
+
+#dark-mode-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #1a237e;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+#dark-mode-toggle:hover {
+  background-color: #3949ab;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode header {
+  background-color: #333;
+}
+
+body.dark-mode section {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+
+body.dark-mode .activity-card {
+  background-color: #2c2c2c;
+  border-color: #444;
+}
+
+body.dark-mode button {
+  background-color: #333;
+}
+
+body.dark-mode button:hover {
+  background-color: #555;
 }
 
 .message {
@@ -139,6 +207,64 @@ button:hover {
 footer {
   text-align: center;
   margin-top: 30px;
-  padding: 20px;
+  padding: 30px; /* Ajustando o espaçamento interno */
   color: #666;
+  font-size: 14px; /* Melhorando a legibilidade */
+}
+
+.participant-card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.participant-card h4 {
+  margin-bottom: 10px;
+  color: #1a237e;
+  font-size: 18px;
+}
+
+.participant-card p {
+  margin-bottom: 8px;
+  color: #555;
+  font-size: 14px;
+}
+
+.participant-card ul {
+  margin-top: 10px;
+  padding-left: 20px;
+  list-style-type: disc;
+  color: #333;
+}
+
+.participant-card ul li {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.participant-card ul li:first-child {
+  font-weight: bold;
+  color: #0066cc;
+}
+
+.participant-card .contact-info {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+.participant-card .contact-info a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.participant-card .contact-info a:hover {
+  text-decoration: underline;
 }
